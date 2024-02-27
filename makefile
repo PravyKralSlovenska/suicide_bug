@@ -1,9 +1,9 @@
 output_file_name = output
-source_file = main.cpp
+content_dir = content
 
-output: main.cpp
+output:
 	@powershell -Command "Write-Host -ForegroundColor Red "Vytvaram subor: ""
-	g++.exe -o $(output_file_name) $(source_file)
+	g++ -I src/include -L src/lib -o $(output_file_name) .\content\main.cpp -l mingw32 -l SDL2main -l SDL2
 	@powershell -Command "Write-Host -ForegroundColor DarkGreen "Spustam subor: $(output_file_name).exe"" 
 	@.\$(output_file_name).exe
 

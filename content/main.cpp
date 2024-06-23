@@ -1,8 +1,9 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include <iostream>
 
-#define SCREEN_WIDTH 1280 
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 600 
+#define SCREEN_HEIGHT 600
 
 int main(int argc, char** argv){
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
@@ -35,12 +36,10 @@ int main(int argc, char** argv){
                     break;
             }
         }
-
-        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 20);
         SDL_RenderClear(renderer);
 
         SDL_RenderPresent(renderer);
     }
-
     return 0;
 }

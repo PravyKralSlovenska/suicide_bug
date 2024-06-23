@@ -8,9 +8,7 @@ output:
 	@.\$(output_file_name).exe
 
 clean:
-	del $(output_file_name).exe
-
+	@del $(output_file_name).exe
 
 run:
-	.\$(output_file_name).exe
-
+	@.\$(output_file_name).exe
